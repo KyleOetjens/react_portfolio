@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-
+import { checkMessage } from '../utils/helpers';
 
 // Here we import a helper function that will check if the email is valid
 // change this to error when message is not filled in
@@ -12,6 +12,15 @@ export default function ContactMe() {
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+const handleMessageLeave = (e) => {
+    const { target } = e;
+    const messageContent = target.value;
+    if (messageContent === ''){
+        setErrorMessage('message must be filled in')
+    }
+//     try to get it to go away
+// errorMessage.useState('')
+}
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -46,11 +55,13 @@ export default function ContactMe() {
               placeholder="email"
             />
             <input
+            className='contact-message'
               value={message}
               name="contact-message"
               onChange={handleInputChange}
               type="text"
               placeholder="Leave a note"
+              onMouseLeave={handleMessageLeave}
             />
             <button type="button" /*onClick={handleFormSubmit}*/>Submit</button>
           </form>
