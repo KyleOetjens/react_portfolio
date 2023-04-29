@@ -7,6 +7,6 @@ import React from 'react'
 
 
 
-export default function Project(){
+export default function ContactMe(){
     
 }
