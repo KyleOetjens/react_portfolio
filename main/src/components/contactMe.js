@@ -39,8 +39,7 @@ export default function ContactMe() {
   };
 
   const handleFormSubmit = (e) => {
-   e.preventDefault()
-    if (validateEmail(email)) {
+    if (!validateEmail(email)) {
       setErrorMessage('email is invalid');
     }
     return;
@@ -58,8 +57,7 @@ export default function ContactMe() {
           onMouseLeave={handleMessageLeave}
         />
         <input
-          className='contact-email'
-          defaultValue={email}
+          value={email}
           name="email"
           onBlur={handleFormSubmit}
           type="email"
