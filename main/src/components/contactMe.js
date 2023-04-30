@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import { checkMessage } from '../utils/helpers';
+import { validateEmail } from '../utils/helpers';
 
 // Here we import a helper function that will check if the email is valid
 // change this to error when message is not filled in
@@ -15,8 +15,9 @@ export default function ContactMe() {
 const handleMessageLeave = (e) => {
     const { target } = e;
     const messageContent = target.value;
+    const fieldType = target.placeholder
     if (messageContent === ''){
-        setErrorMessage('message must be filled in')
+        setErrorMessage(fieldType+' must be filled in')
     }
 //     try to get it to go away
 // errorMessage.useState('')
@@ -36,6 +37,14 @@ const handleMessageLeave = (e) => {
       setMessage(inputValue);
     }
   };
+  
+  const handleFormSubmit = (e) =>{
+    e.preventDefault()
+    if (!validateEmail(email)){
+      setErrorMessage('email is invalid');
+    }
+    return;
+  }
     return (
         <div>
           <p>Contact</p>
@@ -46,13 +55,15 @@ const handleMessageLeave = (e) => {
               onChange={handleInputChange}
               type="text"
               placeholder="Name"
+              onMouseLeave={handleMessageLeave}
             />
             <input
               value={email}
               name="contact-email"
-              onChange={handleInputChange}
+              onChange={handleFormSubmit}
               type="email"
               placeholder="email"
+              onMouseLeave={handleMessageLeave}
             />
             <input
             className='contact-message'
