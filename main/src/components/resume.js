@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Footer from './footer'
 
 export default function Resume() {
     const texts = 'http://localhost:3000/testresume.pdf'
@@ -13,7 +13,7 @@ export default function Resume() {
         aTag.remove();
     }
     return (
-        <div>
+        <div className='resume-page'>
             <h1>Download my latest resume</h1>
             <div className="btnDiv">
                 <button id="downloadBtn" onClick={() => downloadFileAtURL(texts)} value="download">Download my resume</button>
@@ -30,6 +30,7 @@ export default function Resume() {
             <li>APIs</li>
             <li>MongoDB</li>
             <li>Node</li>
+            <Footer />
         </div>
     );
 }

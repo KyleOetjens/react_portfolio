@@ -4,7 +4,7 @@ import Me from '../assets/images/headimg.JPG'
 export default function Project() {
   return (
     <div>
-      <h1>Aout Me</h1>
+      <h1>About Me</h1>
       <img src={Me} alt='Image'></img>
       <p>
         Hello! My name is Kyle Oetjens. I am interested in starting a new carrer as a software developer.  When I am not learning to code, I enjoy being outside, hiking with my wife and dog and playing as many sports as I can.

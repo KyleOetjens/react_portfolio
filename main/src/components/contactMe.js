@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import { validateEmail } from '../utils/helpers';
 
 // Here we import a helper function that will check if the email is valid
@@ -7,21 +7,21 @@ import { validateEmail } from '../utils/helpers';
 
 export default function ContactMe() {
 
-    const [name, setName] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-const handleMessageLeave = (e) => {
+  const handleMessageLeave = (e) => {
     const { target } = e;
     const messageContent = target.value;
     const fieldType = target.placeholder
-    if (messageContent === ''){
-        setErrorMessage(fieldType+' must be filled in')
+    if (messageContent === '') {
+      setErrorMessage(fieldType + ' must be filled in')
     }
-//     try to get it to go away
-// errorMessage.useState('')
-}
+    //     try to get it to go away
+    // errorMessage.useState('')
+  }
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -33,54 +33,55 @@ const handleMessageLeave = (e) => {
       setName(inputValue);
     } else if (inputType === 'contact-email') {
       setEmail(inputValue);
-    } else if (inputType ==='contact-message'){
+    } else if (inputType === 'contact-message') {
       setMessage(inputValue);
     }
   };
-  
-  const handleFormSubmit = (e) =>{
-    e.preventDefault()
-    if (!validateEmail(email)){
+
+  const handleFormSubmit = (e) => {
+   e.preventDefault()
+    if (validateEmail(email)) {
       setErrorMessage('email is invalid');
     }
     return;
   }
-    return (
+  return (
+    <div>
+      <p>Contact</p>
+      <form className="form">
+        <input
+          value={name}
+          name="contact-name"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Name"
+          onMouseLeave={handleMessageLeave}
+        />
+        <input
+          className='contact-email'
+          defaultValue={email}
+          name="email"
+          onBlur={handleFormSubmit}
+          type="email"
+          placeholder="email"
+          onMouseLeave={handleMessageLeave}
+        />
+        <input
+          className='contact-message'
+          value={message}
+          name="contact-message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Leave a note"
+          onMouseLeave={handleMessageLeave}
+        />
+        <button type="button" /*onClick={handleFormSubmit}*/>Submit</button>
+      </form>
+      {errorMessage && (
         <div>
-          <p>Contact</p>
-          <form className="form">
-          <input
-              value={name}
-              name="contact-name"
-              onChange={handleInputChange}
-              type="text"
-              placeholder="Name"
-              onMouseLeave={handleMessageLeave}
-            />
-            <input
-              value={email}
-              name="contact-email"
-              onChange={handleFormSubmit}
-              type="email"
-              placeholder="email"
-              onMouseLeave={handleMessageLeave}
-            />
-            <input
-            className='contact-message'
-              value={message}
-              name="contact-message"
-              onChange={handleInputChange}
-              type="text"
-              placeholder="Leave a note"
-              onMouseLeave={handleMessageLeave}
-            />
-            <button type="button" /*onClick={handleFormSubmit}*/>Submit</button>
-          </form>
-          {errorMessage && (
-            <div>
-              <p className="error-text">{errorMessage}</p>
-            </div>
-          )}
+          <p className="error-text">{errorMessage}</p>
         </div>
-      );
-  }
+      )}
+    </div>
+  );
+}

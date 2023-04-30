@@ -20,14 +20,14 @@ const renderPage = () => {
         return <ContactMe />;
      }
      if (currentPage === 'Resume') {
-        return <Resume />;
+        return <Resume /> ;
      }
      return <Home />
     };
      const handlePageChange = (page) => setCurrentPage(page);
 
      return (
-        <div>
+        <div className='page-body'>
             <Header />
           {/* We are passing the currentPage from state and the function to update it */}
           <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
