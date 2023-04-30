@@ -1,22 +1,14 @@
 import React from 'react'
-
+import Me from '../assets/images/headimg.JPG'
 
 export default function Project() {
     return (
       <div>
-        <h1>Home</h1>
+        <h1>Aout Me</h1>
+<img src={Me} alt='Image'></img>
         <p>
-          Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-          molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-          magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-          efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-          mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-          posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-          faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-          ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-          dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-          rhoncus. Etiam vel condimentum magna, quis tempor nulla.
+        Hello! My name is Kyle Oetjens. I am interested in starting a new carrer as a software developer.  When I am not learning to code, I enjoy being outside, hiking with my wife and dog and playing as many sports as I can.
+                I am currenty a business analyst for a large CPG company and I am working to gain new skils that would allow me to enter the world of software development.  Take a look at what I have made so far!
         </p>
       </div>
     );
