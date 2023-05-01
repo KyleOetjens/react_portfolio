@@ -30,7 +30,6 @@ export default function Resume() {
             <li>APIs</li>
             <li>MongoDB</li>
             <li>Node</li>
-            <Footer />
         </div>
     );
 }

@@ -38,11 +38,14 @@ export default function ContactMe() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    if (!validateEmail(email)) {
+  const handleEmail = (e) => {
+    const valid = validateEmail(e.target.value)
+    if (!valid) {
       setErrorMessage('email is invalid');
     }
-    return;
+    else {
+      setErrorMessage('')
+    }
   }
   return (
     <div>
@@ -57,12 +60,12 @@ export default function ContactMe() {
           onMouseLeave={handleMessageLeave}
         />
         <input
-          value={email}
+          defautValue={email}
           name="email"
-          onBlur={handleFormSubmit}
+          onBlur={handleEmail}
           type="email"
           placeholder="email"
-          onMouseLeave={handleMessageLeave}
+          //onMouseLeave={handleMessageLeave}
         />
         <input
           className='contact-message'
