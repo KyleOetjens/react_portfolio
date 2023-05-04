@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { validateEmail } from '../utils/helpers';
+import Form from 'react-bootstrap/Form';
 
 // Here we import a helper function that will check if the email is valid
 // change this to error when message is not filled in
@@ -47,37 +48,54 @@ export default function ContactMe() {
       setErrorMessage('')
     }
   }
-  return (
-    <div>
-      <p>Contact</p>
-      <form className="form">
-        <input
-          value={name}
-          name="contact-name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Name"
-          onMouseLeave={handleMessageLeave}
-        />
-        <input
-          defautValue={email}
-          name="email"
-          onBlur={handleEmail}
-          type="email"
-          placeholder="email"
-          //onMouseLeave={handleMessageLeave}
-        />
-        <input
-          className='contact-message'
-          value={message}
-          name="contact-message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Leave a note"
-          onMouseLeave={handleMessageLeave}
-        />
-        <button type="button" /*onClick={handleFormSubmit}*/>Submit</button>
-      </form>
+//   return (
+//     <div>
+//       <p>Contact</p>
+//       <form className="form">
+//         <input
+//           value={name}
+//           name="contact-name"
+//           onChange={handleInputChange}
+//           type="text"
+//           placeholder="Name"
+//           onMouseLeave={handleMessageLeave}
+//         />
+//         <input
+//           defautValue={email}
+//           name="email"
+//           onBlur={handleEmail}
+//           type="email"
+//           placeholder="email"
+//           //onMouseLeave={handleMessageLeave}
+//         />
+//         <input
+//           className='contact-message'
+//           value={message}
+//           name="contact-message"
+//           onChange={handleInputChange}
+//           type="text"
+//           placeholder="Leave a note"
+//           onMouseLeave={handleMessageLeave}
+//         />
+//         <button type="button" /*onClick={handleFormSubmit}*/>Submit</button>
+//       </form>
+return (
+  <div>
+  <Form>
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
+      <Form.Label>Name</Form.Label>
+      <Form.Control type="text" placeholder="Jon" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" defautValue={email} onBlur={handleEmail}>
+      <Form.Label>Email address</Form.Label>
+      <Form.Control type="email" placeholder="name@example.com" />
+    </Form.Group>
+    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+      <Form.Label>Leave a Message</Form.Label>
+      <Form.Control as="textarea" rows={5} />
+    </Form.Group>
+  </Form>
+
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
@@ -85,4 +103,17 @@ export default function ContactMe() {
       )}
     </div>
   );
+// 
+// return (
+//   <Form>
+//     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+//       <Form.Label>Email address</Form.Label>
+//       <Form.Control type="email" placeholder="name@example.com" />
+//     </Form.Group>
+//     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+//       <Form.Label>Example textarea</Form.Label>
+//       <Form.Control as="textarea" rows={3} />
+//     </Form.Group>
+//   </Form>
+// );
 }

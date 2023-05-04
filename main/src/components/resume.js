@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from './footer'
+import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function Resume() {
     const texts = 'http://localhost:3000/testresume.pdf'
@@ -20,16 +20,30 @@ export default function Resume() {
             </div>
             <p>Experience in</p>
             <ul>Front-End</ul>
-            <li>HTML</li>
+            <ListGroup>
+        <ListGroup.Item>HTML</ListGroup.Item>
+        <ListGroup.Item>CSS</ListGroup.Item>
+        <ListGroup.Item>Javascript</ListGroup.Item>
+        <ListGroup.Item>Bootstrap</ListGroup.Item>
+        <ListGroup.Item>React</ListGroup.Item>
+        <ListGroup.Item>Responsive web design</ListGroup.Item>
+      </ListGroup>
+            {/* <li>HTML</li>
             <li>CSS</li>
             <li>Javascript</li>
             <li>Bootstrap</li>
             <li>React</li>
-            <li>Responsive web design</li>
+            <li>Responsive web design</li> */}
             <ul>Back-End</ul>
-            <li>APIs</li>
+            <ListGroup>
+        <ListGroup.Item>APIs</ListGroup.Item>
+        <ListGroup.Item>MongoDB</ListGroup.Item>
+        <ListGroup.Item>Node</ListGroup.Item>
+      </ListGroup>
+            {/* <li>APIs</li>
             <li>MongoDB</li>
-            <li>Node</li>
+            <li>Node</li> */}
         </div>
     );
 }
+

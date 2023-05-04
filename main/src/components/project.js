@@ -1,27 +1,31 @@
 import React from 'react'
 import List from './list';
-import WeatherLogo from '../assets/images/oceanrock.jpeg'
-
+import WeatherLogo from '../assets/images/weather.png'
+import TextEdit from '../assets/images/texteditor.png'
+import Crypto from '../assets/images/cryptoC.png'
+import Guilds from '../assets/images/plentyofguilds.png'
+import PasswordGen from '../assets/images/passwordgen.png'
+import Schedule from '../assets/images/schedule.png'
 
 const groceries = [
   {
     id: 1,
     name: "PWA Text Editor",
-    image: '',
+    image: TextEdit,
     gitPage:'',
     gitLink: ''
   },
   {
     id: 2,
-    name: "Social Network API",
-    image: '',
+    name: "Crypto Converter",
+    image: Crypto,
     gitPage:'',
     gitLink: ''
   },
   {
     id: 3,
-    name: "Ecommerce Backend",
-    image: '',
+    name: "Plenty of Guilds",
+    image: Guilds,
     gitPage:'',
     gitLink: ''
   },
@@ -34,15 +38,15 @@ const groceries = [
   },
   {
     id: 5,
-    name: "Employee Tracker",
-    image: '',
+    name: "Password Generator",
+    image: PasswordGen,
     gitPage:'',
     gitLink: ''
   },
   {
     id: 6,
-    name: "Team Profile Generator",
-    image: WeatherLogo,
+    name: "Work Day Scheduler",
+    image: Schedule,
     gitPage:'',
     gitLink: 'https://github.com/KyleOetjens/TeamProfileGenerator'
   }
