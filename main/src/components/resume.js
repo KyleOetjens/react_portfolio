@@ -19,14 +19,14 @@ export default function Resume() {
                 <button id="downloadBtn" onClick={() => downloadFileAtURL(texts)} value="download">Download my resume</button>
             </div>
             <p>Experience in</p>
-            <ul>Front-End</ul>
+            <ul className='res-list'>Front-End</ul>
             <ListGroup>
-        <ListGroup.Item>HTML</ListGroup.Item>
-        <ListGroup.Item>CSS</ListGroup.Item>
-        <ListGroup.Item>Javascript</ListGroup.Item>
-        <ListGroup.Item>Bootstrap</ListGroup.Item>
-        <ListGroup.Item>React</ListGroup.Item>
-        <ListGroup.Item>Responsive web design</ListGroup.Item>
+        <ListGroup.Item className='list_item'>HTML</ListGroup.Item>
+        <ListGroup.Item className='list_item'>CSS</ListGroup.Item>
+        <ListGroup.Item className='list_item'>Javascript</ListGroup.Item>
+        <ListGroup.Item className='list_item'>Bootstrap</ListGroup.Item>
+        <ListGroup.Item className='list_item'>React</ListGroup.Item>
+        <ListGroup.Item className='list_item'>Responsive web design</ListGroup.Item>
       </ListGroup>
             {/* <li>HTML</li>
             <li>CSS</li>
@@ -34,11 +34,11 @@ export default function Resume() {
             <li>Bootstrap</li>
             <li>React</li>
             <li>Responsive web design</li> */}
-            <ul>Back-End</ul>
+            <ul className='res-list'>Back-End</ul>
             <ListGroup>
-        <ListGroup.Item>APIs</ListGroup.Item>
-        <ListGroup.Item>MongoDB</ListGroup.Item>
-        <ListGroup.Item>Node</ListGroup.Item>
+        <ListGroup.Item className='list_item'>APIs</ListGroup.Item>
+        <ListGroup.Item className='list_item'>MongoDB</ListGroup.Item>
+        <ListGroup.Item className='list_item'>Node</ListGroup.Item>
       </ListGroup>
             {/* <li>APIs</li>
             <li>MongoDB</li>

@@ -82,17 +82,17 @@ export default function ContactMe() {
 return (
   <div>
   <Form>
-  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
+  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" onBlur={handleMessageLeave}>
       <Form.Label>Name</Form.Label>
-      <Form.Control type="text" placeholder="Jon" />
+      <Form.Control type="text" placeholder="Name" className='contact1'/>
     </Form.Group>
     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" defautValue={email} onBlur={handleEmail}>
       <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" placeholder="name@example.com" />
+      <Form.Control type="email" placeholder="name@example.com" className='contact1'/>
     </Form.Group>
-    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+    <Form.Group className="mb-3 " controlId="exampleForm.ControlTextarea1" onBlur={handleMessageLeave}>
       <Form.Label>Leave a Message</Form.Label>
-      <Form.Control as="textarea" rows={5} />
+      <Form.Control as="textarea" rows={10} placeholder="Message" className='contact1' />
     </Form.Group>
   </Form>
 

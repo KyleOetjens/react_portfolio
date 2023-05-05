@@ -18,15 +18,15 @@ function List(props) {
     <Card.Body>
       <Card.Title>{item.name}</Card.Title>
       <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
+        {item.text}
       </Card.Text>
     </Card.Body>
     <Card.Body>
-      <Card.Link href={item.gitLink}>Repo</Card.Link>
-      <Card.Link href={item.gitPage}>Deployed App</Card.Link>
+      <Card.Link href={item.repo} className="card-link" target="blank">Repo</Card.Link>
+      <Card.Link href={item.deployed} className="card-link" target="blank">Deployed App</Card.Link>
     </Card.Body>
   </Card>
+  
         </div>
         
       ))}
@@ -77,3 +77,4 @@ export default List;
 //     </div>
 //   );
 // }
+
