@@ -5,7 +5,7 @@ import TextEdit from '../assets/images/texteditor.png'
 import Crypto from '../assets/images/cryptoC.png'
 import Guilds from '../assets/images/plentyofguilds.png'
 import PasswordGen from '../assets/images/passwordgen.png'
-import Schedule from '../assets/images/schedule.png'
+import Bonatics from '../assets/images/bonatics.png'
 
 const groceries = [
   {
@@ -50,11 +50,11 @@ const groceries = [
   },
   {
     id: 6,
-    name: "Work Day Scheduler",
-    text:'Plan your day with a scheduler that will store your input, and also show which time slots are coming up!',
-    image: Schedule,
-    deployed:'https://kyleoetjens.github.io/work_day_scheduler/',
-    repo: 'https://github.com/KyleOetjens/work_day_scheduler'
+    name: "Bonaics",
+    text:'Find, save and trade your favorite plants',
+    image: Bonatics,
+    deployed:'https://bonatics.herokuapp.com/',
+    repo: 'https://github.com/SotoTheMayor/bonatics'
   }
 ];
 export default function Project() {
