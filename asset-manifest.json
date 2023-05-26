@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react_portfolio/static/css/main.69f9a892.css",
+    "main.js": "/react_portfolio/static/js/main.b1745f5b.js",
+    "static/media/bonatics.png": "/react_portfolio/static/media/bonatics.5d6c566a4d511c72fa20.png",
+    "static/media/weather.png": "/react_portfolio/static/media/weather.2cdd1ee55b6f3ef2eaaf.png",
+    "static/media/plentyofguilds.png": "/react_portfolio/static/media/plentyofguilds.4c9c7d04a58d843f7a54.png",
+    "static/media/cryptoC.png": "/react_portfolio/static/media/cryptoC.3c3689382a8ee96e41b8.png",
+    "static/media/passwordgen.png": "/react_portfolio/static/media/passwordgen.4d9526ac6968f72b2a9c.png",
+    "static/media/texteditor.png": "/react_portfolio/static/media/texteditor.84b3f5d2aa164441462d.png",
+    "static/media/headimg.JPG": "/react_portfolio/static/media/headimg.2ac43b63f8af73d1426f.JPG",
+    "index.html": "/react_portfolio/index.html",
+    "main.69f9a892.css.map": "/react_portfolio/static/css/main.69f9a892.css.map",
+    "main.b1745f5b.js.map": "/react_portfolio/static/js/main.b1745f5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69f9a892.css",
+    "static/js/main.b1745f5b.js"
+  ]
+}
