@@ -50,7 +50,7 @@ const groceries = [
   },
   {
     id: 6,
-    name: "Bonaics",
+    name: "Bonatics",
     text:'Find, save and trade your favorite plants',
     image: Bonatics,
     deployed:'https://bonatics.herokuapp.com/',
